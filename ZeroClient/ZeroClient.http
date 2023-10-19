@@ -1,0 +1,6 @@
+@ZeroClient_HostAddress = http://localhost:5016
+
+GET {{ZeroClient_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  zeroclient:
+    image: ${DOCKER_REGISTRY-}zeroclient
+    build:
+      context: .
+      dockerfile: ZeroClient/Dockerfile
+    networks:
+      - z-network
+
+networks:
+  z-network:
+    name: custom_znetwork
+    external: true
