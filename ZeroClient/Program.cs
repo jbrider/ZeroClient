@@ -29,10 +29,10 @@ app.MapGet("/sendmessage", () =>
     using (var client = new RequestSocket())
     {
         client.Connect("tcp://ZeroServer:5555");
-        for (int i = 0; i < 10; i++)
+        //for (int i = 0; i < 10; i++)
         {
-            Console.WriteLine("Sending Hello");
-            client.SendFrame("Hello");
+            Console.WriteLine("Sending Jobs Count");
+            client.SendFrame("100");
             var message = client.ReceiveFrameString();
             Console.WriteLine("Received {0}", message);
         }
